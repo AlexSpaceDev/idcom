@@ -122,11 +122,7 @@ export default function Hero({ onNavigate }: HeroProps) {
 
             <div className="mt-10 max-w-2xl bg-black/40 backdrop-blur-sm border-l-2 border-[#F5A800] pl-5 pr-6 py-5">
               <p className="italic text-[#F5A800]/90 text-[15px] leading-relaxed">
-                &ldquo;El mantenimiento preventivo garantiza operaciones seguras y
-                reduce costos por fallas. Cada tipo de maquinaria requiere
-                atención especializada para maximizar su vida útil. Ofrecemos
-                un servicio integral que cubre desde motores hasta
-                infraestructura y calibración.&rdquo;
+                &ldquo;Comprometidos con la excelencia estructural y el desarrollo industrial del Ecuador, fabricando maquinaria de alta precisión que impulsa su productividad.&rdquo;
               </p>
             </div>
 
@@ -147,9 +143,9 @@ export default function Hero({ onNavigate }: HeroProps) {
             </div>
           </div>
 
-          <div ref={rightRef} className="hidden lg:block">
+          <div ref={rightRef} className="mt-4 lg:mt-0">
             <div className="relative">
-              <div className="relative aspect-square max-w-md ml-auto flex items-center justify-center">
+              <div className="relative aspect-square max-w-[280px] sm:max-w-sm lg:max-w-md mx-auto lg:ml-auto flex items-center justify-center">
                 <svg
                   viewBox="0 0 200 200"
                   className="absolute inset-0 w-full h-full"
@@ -161,6 +157,7 @@ export default function Hero({ onNavigate }: HeroProps) {
                     stroke="#F5A800"
                     strokeWidth="1"
                     opacity="0.30"
+                    className="hex-rotate hex-rotate-1"
                   />
                   <polygon
                     points="100,30 162,64 162,136 100,170 38,136 38,64"
@@ -168,6 +165,7 @@ export default function Hero({ onNavigate }: HeroProps) {
                     stroke="#F5A800"
                     strokeWidth="1"
                     opacity="0.18"
+                    className="hex-rotate hex-rotate-2"
                   />
                   <polygon
                     points="100,52 142,76 142,124 100,148 58,124 58,76"
@@ -175,6 +173,7 @@ export default function Hero({ onNavigate }: HeroProps) {
                     stroke="#F5A800"
                     strokeWidth="1"
                     opacity="0.10"
+                    className="hex-rotate hex-rotate-3"
                   />
                   <g stroke="#F5A800" strokeWidth="1" opacity="0.5">
                     <line x1="100" y1="0" x2="100" y2="8" />
@@ -214,7 +213,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           </div>
         </div>
 
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 text-[10px] uppercase tracking-[0.32em]">
+        <div className="hidden lg:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-white/40 text-[10px] uppercase tracking-[0.32em]">
           <span>Descubre más</span>
           <span className="h-8 w-px bg-white/30" />
         </div>

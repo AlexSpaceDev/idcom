@@ -31,6 +31,32 @@ body {
   background: #ffb81c;
 }
 
+@keyframes hex-spin-cw {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes hex-spin-ccw {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.hex-rotate {
+  transform-origin: 100px 100px;
+  transform-box: view-box;
+  will-change: transform;
+}
+.hex-rotate-1 {
+  animation: hex-spin-cw 14s linear infinite;
+}
+.hex-rotate-2 {
+  animation: hex-spin-ccw 20s linear infinite;
+}
+.hex-rotate-3 {
+  animation: hex-spin-cw 28s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

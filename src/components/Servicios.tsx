@@ -140,24 +140,26 @@ export default function Servicios({ onSelect, onOpenCatalog }: ServiciosProps) {
                 onClick={() => onSelect(s.id)}
                 className="group relative w-full h-full text-left bg-white overflow-hidden transition-shadow duration-300 hover:shadow-[0_30px_50px_-25px_rgba(245,168,0,0.45)] border border-transparent hover:border-[#F5A800]/40 will-change-transform"
               >
-                <div className="relative aspect-[4/3] overflow-hidden bg-[#1A1A1A]">
-                  <img
-                    src={s.image}
-                    alt={s.title}
-                    loading={i < 3 ? "eager" : "lazy"}
-                    decoding="async"
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/60 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute top-3 left-3 font-display font-extrabold text-[11px] tracking-[0.22em] text-white uppercase bg-[#1A1A1A]/70 backdrop-blur-sm px-2.5 py-1">
+                <div className="relative aspect-[4/3] bg-[#1A1A1A]">
+                  <div className="absolute inset-0 overflow-hidden">
+                    <img
+                      src={s.image}
+                      alt={s.title}
+                      loading={i < 3 ? "eager" : "lazy"}
+                      decoding="async"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/60 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute top-0 right-0 w-0 h-0 border-t-[28px] border-t-[#F5A800] border-l-[28px] border-l-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                  <div className="absolute top-3 left-3 font-display font-extrabold text-[11px] tracking-[0.22em] text-white uppercase bg-[#1A1A1A]/70 backdrop-blur-sm px-2.5 py-1 z-10">
                     {String(i + 1).padStart(2, "0")} · Servicio
                   </div>
-                  <div className="absolute -bottom-5 left-5 h-12 w-12 rounded-full bg-[#F5A800] flex items-center justify-center shadow-[0_10px_25px_-10px_rgba(245,168,0,0.9)] ring-4 ring-white">
+                  <div className="absolute -bottom-6 left-5 h-12 w-12 rounded-full bg-[#F5A800] flex items-center justify-center shadow-[0_10px_25px_-10px_rgba(245,168,0,0.9)] ring-4 ring-white z-10">
                     <I className="w-5 h-5 text-[#1A1A1A]" strokeWidth={2.4} />
                   </div>
-                  <div className="absolute top-0 right-0 w-0 h-0 border-t-[28px] border-t-[#F5A800] border-l-[28px] border-l-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <div className="px-5 pt-9 pb-6">
+                <div className="px-5 pt-10 pb-6">
                   <h3 className="font-display font-extrabold text-lg leading-snug text-[#1A1A1A] tracking-tight">
                     {s.title}
                   </h3>

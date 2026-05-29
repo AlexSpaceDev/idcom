@@ -88,7 +88,7 @@ export default function Footer({ onOpenCatalog, onNavigate }: FooterProps) {
         </div>
         <div className="mt-14 pt-6 border-t border-[#F5A800]/40 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40 text-center sm:text-left">
           <p>
-            © 2026 IDCOM — Ingeniería en Diseño y Construcciones Metalmecánicas.
+            © {new Date().getFullYear()} IDCOM — Ingeniería en Diseño y Construcciones Metalmecánicas.
             Todos los derechos reservados.
           </p>
           <p>

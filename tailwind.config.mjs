@@ -26,10 +26,19 @@ export default {
           "0%": { opacity: "0", transform: "translateY(12px) scale(0.98)" },
           "100%": { opacity: "1", transform: "translateY(0) scale(1)" },
         },
+        "hex-spin-cw": {
+          "to": { transform: "rotate(360deg)" },
+        },
+        "hex-spin-ccw": {
+          "to": { transform: "rotate(-360deg)" },
+        },
       },
       animation: {
         fadeIn: "fadeIn 0.2s ease-out",
         modalIn: "modalIn 0.25s ease-out",
+        "hex-spin-slow":    "hex-spin-cw 14s linear infinite",
+        "hex-spin-slower":  "hex-spin-ccw 20s linear infinite",
+        "hex-spin-slowest": "hex-spin-cw 28s linear infinite",
       },
     },
   },
