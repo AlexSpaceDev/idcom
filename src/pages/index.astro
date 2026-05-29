@@ -1,6 +1,14 @@
 ---
 import Landing from "../components/Landing";
 import "../styles/global.css";
+
+// Ruta relativa a propósito: el scraper de WhatsApp/redes la resuelve contra la
+// URL que escanea (el dev tunnel ahora, o el dominio real después). Una URL
+// absoluta no sirve aquí porque el tunnel reescribe el Host a localhost.
+const ogImage = "/assets/og-idcom.png";
+const title = "IDCOM · Ingeniería en Diseño y Construcciones Metalmecánicas";
+const description =
+  "IDCOM — Ingeniería en Diseño y Construcciones Metalmecánicas. Soluciones integrales en ingeniería mecánica, construcción y mantenimiento industrial en Ecuador.";
 ---
 
 <!doctype html>
@@ -8,13 +16,27 @@ import "../styles/global.css";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="IDCOM — Ingeniería en Diseño y Construcciones Metalmecánicas. Soluciones integrales en ingeniería mecánica, construcción y mantenimiento industrial en Ecuador."
-    />
-    <title>IDCOM · Ingeniería en Diseño y Construcciones Metalmecánicas</title>
+    <meta name="description" content={description} />
+    <title>{title}</title>
 
     <link rel="icon" type="image/png" href="/assets/idcom_mark.png" />
+
+    <!-- Open Graph / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_EC" />
+    <meta property="og:site_name" content="IDCOM" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="1000" />
+    <meta property="og:image:alt" content="IDCOM" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -56,14 +56,14 @@
   },
   "service-carretones": {
     "src": "/photos/service-carretones.webp",
-    "title": "MSC Vigo IMO 9480227 01",
-    "creator": "Piergiuliano Chesi",
-    "creator_url": null,
+    "title": "BW61985 (18.06.27, Motorvej 501, Viby J)DSC_2619_Balancer",
+    "creator": "Lav Ulv",
+    "creator_url": "https://www.flickr.com/photos/99460566@N06",
     "license": "by",
-    "license_version": "3.0",
-    "license_url": "https://creativecommons.org/licenses/by/3.0/",
-    "foreign_landing_url": "https://commons.wikimedia.org/w/index.php?curid=27248283",
-    "source": "wikimedia"
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/99460566@N06/45586967955",
+    "source": "flickr"
   },
   "service-cosechadoras": {
     "src": "/photos/service-cosechadoras.webp",
@@ -89,13 +89,13 @@
   },
   "service-plataformas": {
     "src": "/photos/service-plataformas.webp",
-    "title": "Walk the Plank",
-    "creator": "Steve Snodgrass",
-    "creator_url": "https://www.flickr.com/photos/10710442@N08",
+    "title": "Birmingham City Council - New office building construction site at Birmingham Science Park Aston",
+    "creator": "ell brown",
+    "creator_url": "https://www.flickr.com/photos/39415781@N06",
     "license": "by",
     "license_version": "2.0",
     "license_url": "https://creativecommons.org/licenses/by/2.0/",
-    "foreign_landing_url": "https://www.flickr.com/photos/10710442@N08/4923278674",
+    "foreign_landing_url": "https://www.flickr.com/photos/39415781@N06/4587378820",
     "source": "flickr"
   },
   "service-reservorios": {

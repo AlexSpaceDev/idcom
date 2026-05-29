@@ -20,9 +20,9 @@ export default function Footer({ onOpenCatalog, onNavigate }: FooterProps) {
         <div className="grid md:grid-cols-3 gap-12">
           <div>
             <img
-              src="/assets/idcom_logo_transparent.png"
+              src="/assets/logo-solo-idcom.png"
               alt="IDCOM"
-              className="h-14 w-auto select-none"
+              className="h-24 w-auto select-none"
               draggable={false}
             />
             <p className="mt-6 text-[#F5A800] text-sm font-semibold leading-relaxed">

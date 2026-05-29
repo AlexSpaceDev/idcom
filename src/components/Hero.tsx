@@ -106,7 +106,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             </div>
             <h1 className="font-display font-extrabold leading-[0.88] tracking-tight">
               <img
-                src="/assets/idcom_horizontal.png"
+                src="/assets/logo-completo-idcom.png"
                 alt="IDCOM — Soluciones Metal Mecánicas"
                 draggable={false}
                 className="block w-full max-w-[560px] h-auto drop-shadow-[0_10px_30px_rgba(245,168,0,0.15)]"

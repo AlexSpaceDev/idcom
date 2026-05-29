@@ -36,7 +36,7 @@ export default function Navbar({ onOpenCatalog, onNavigate }: NavbarProps) {
       <div className="mx-auto max-w-7xl px-5 sm:px-8 h-20 flex items-center justify-between">
         <a href="#inicio" onClick={handleClick({ id: "inicio" })}>
           <img
-            src="/assets/idcom_logo_transparent.png"
+            src="/assets/logo-completo-idcom.png"
             alt="IDCOM — Soluciones Metal Mecánicas"
             className="h-10 w-auto select-none"
             draggable={false}
