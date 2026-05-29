@@ -1,0 +1,35 @@
+{
+  "hero-workshop": {
+    "src": "assets/img/hero-workshop.jpg",
+    "title": "Workshop carpenter tools",
+    "creator": "Unknown",
+    "creator_url": null,
+    "license": "cc0",
+    "license_version": "1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "foreign_landing_url": "https://www.rawpixel.com/image/3293708/free-photo-image-wood-alloy-wheel-architecture",
+    "source": "rawpixel"
+  },
+  "service-cosechadoras": {
+    "src": "assets/img/service-cosechadoras.jpg",
+    "title": "Working Boat",
+    "creator": "Cocoabiscuit",
+    "creator_url": "https://www.flickr.com/photos/90028379@N00",
+    "license": "by-nc-nd",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/90028379@N00/33121657718",
+    "source": "flickr"
+  },
+  "service-carretones": {
+    "src": "assets/img/service-carretones.jpg",
+    "title": "Isuzu NPR Delivery Truck",
+    "creator": "Bill Ward's Brickpile",
+    "creator_url": "https://www.flickr.com/photos/23501684@N00",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/23501684@N00/3084194962",
+    "source": "flickr"
+  }
+}

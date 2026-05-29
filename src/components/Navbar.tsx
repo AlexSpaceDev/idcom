@@ -55,15 +55,6 @@ export default function Navbar({ onOpenCatalog, onNavigate }: NavbarProps) {
               </a>
             </li>
           ))}
-          <li className="ml-3">
-            <a
-              href="#contacto"
-              onClick={handleClick({ id: "contacto" })}
-              className="inline-flex items-center gap-2 rounded-sm bg-[#F5A800] px-5 py-2.5 text-sm font-bold text-[#1A1A1A] uppercase tracking-wider hover:bg-[#FFB81C] transition-colors"
-            >
-              Cotizar
-            </a>
-          </li>
         </ul>
         <button
           onClick={() => setOpen((v) => !v)}
@@ -91,15 +82,6 @@ export default function Navbar({ onOpenCatalog, onNavigate }: NavbarProps) {
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href="#contacto"
-              onClick={handleClick({ id: "contacto" })}
-              className="mt-3 block text-center rounded-sm bg-[#F5A800] px-5 py-3 font-bold text-[#1A1A1A] uppercase tracking-wider"
-            >
-              Cotizar
-            </a>
-          </li>
         </ul>
       </div>
     </nav>

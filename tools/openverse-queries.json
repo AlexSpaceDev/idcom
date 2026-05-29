@@ -1,0 +1,14 @@
+[
+  { "id": "hero-workshop",        "query": "industrial metalworking workshop interior",   "aspect": "wide",  "size": "large" },
+  { "id": "hero-welding",         "query": "welder sparks industrial steel",              "aspect": "wide",  "size": "large" },
+  { "id": "service-cosechadoras", "query": "shrimp aquaculture harvester equipment",      "aspect": null,    "size": "large" },
+  { "id": "service-reservorios",  "query": "industrial steel fuel storage tank",          "aspect": null,    "size": "large" },
+  { "id": "service-plataformas",  "query": "industrial steel platform loading dock",      "aspect": null,    "size": "large" },
+  { "id": "service-carretones",   "query": "heavy duty industrial trailer cart steel",    "aspect": null,    "size": "large" },
+  { "id": "service-mantenimiento","query": "industrial machinery maintenance technician", "aspect": null,    "size": "large" },
+  { "id": "about-precision",      "query": "machinist precision lathe metal working",     "aspect": null,    "size": "large" },
+  { "id": "about-blueprint",      "query": "engineering blueprint technical drawing",     "aspect": null,    "size": "large" },
+  { "id": "team-workers",         "query": "industrial workers safety helmets team",      "aspect": "tall",  "size": "large" },
+  { "id": "process-factory",      "query": "metal factory production line industrial",    "aspect": null,    "size": "large" },
+  { "id": "process-steel",        "query": "steel manufacturing worker welding",          "aspect": null,    "size": "large" }
+]

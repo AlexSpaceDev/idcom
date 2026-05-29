@@ -1,80 +1,178 @@
+import { useRef } from "react";
 import { ArrowRight } from "lucide-react";
-import Reveal from "./Reveal";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 import { SERVICES } from "../data/services";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 type ServiciosProps = {
   onSelect: (id: string) => void;
   onOpenCatalog: () => void;
 };
 
+const MAGNET_STRENGTH = 0.18;
+
 export default function Servicios({ onSelect, onOpenCatalog }: ServiciosProps) {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const headerRef = useRef<HTMLDivElement | null>(null);
+  const ctaRef = useRef<HTMLDivElement | null>(null);
+  const cardRefs = useRef<(HTMLButtonElement | null)[]>([]);
+
+  useGSAP(
+    (_ctx, contextSafe) => {
+      // Header reveal on scroll
+      gsap.from(headerRef.current, {
+        opacity: 0,
+        y: 32,
+        duration: 0.9,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: headerRef.current,
+          start: "top 85%",
+          once: true,
+        },
+      });
+
+      // Cards staggered entrance using ScrollTrigger.batch
+      const cards = cardRefs.current.filter(Boolean) as HTMLButtonElement[];
+      if (cards.length) {
+        gsap.set(cards, { opacity: 0, y: 40 });
+        ScrollTrigger.batch(cards, {
+          start: "top 88%",
+          onEnter: (batch) =>
+            gsap.to(batch, {
+              opacity: 1,
+              y: 0,
+              duration: 0.7,
+              stagger: 0.08,
+              ease: "power3.out",
+              overwrite: true,
+            }),
+        });
+      }
+
+      // CTA reveal
+      gsap.from(ctaRef.current, {
+        opacity: 0,
+        y: 24,
+        duration: 0.7,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ctaRef.current,
+          start: "top 90%",
+          once: true,
+        },
+      });
+
+      // Magnetic hover — contextSafe handlers attached per card
+      if (!contextSafe) return;
+      const cleanups: Array<() => void> = [];
+      cards.forEach((card) => {
+        const onMove = contextSafe!((e: MouseEvent) => {
+          const r = card.getBoundingClientRect();
+          const dx = e.clientX - (r.left + r.width / 2);
+          const dy = e.clientY - (r.top + r.height / 2);
+          gsap.to(card, {
+            x: dx * MAGNET_STRENGTH,
+            y: dy * MAGNET_STRENGTH,
+            duration: 0.4,
+            ease: "power2.out",
+            overwrite: "auto",
+          });
+        });
+        const onLeave = contextSafe!(() => {
+          gsap.to(card, {
+            x: 0,
+            y: 0,
+            duration: 0.6,
+            ease: "elastic.out(1, 0.5)",
+            overwrite: "auto",
+          });
+        });
+        card.addEventListener("mousemove", onMove);
+        card.addEventListener("mouseleave", onLeave);
+        cleanups.push(() => {
+          card.removeEventListener("mousemove", onMove);
+          card.removeEventListener("mouseleave", onLeave);
+        });
+      });
+
+      return () => cleanups.forEach((fn) => fn());
+    },
+    { scope: sectionRef }
+  );
+
   return (
-    <section id="servicios" className="bg-[#F2F2F2] py-24 sm:py-32">
+    <section
+      ref={sectionRef}
+      id="servicios"
+      className="bg-[#F2F2F2] py-24 sm:py-32"
+    >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <Reveal>
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-3">
-              <span className="h-px w-10 bg-[#F5A800]" />
-              <span className="text-xs font-semibold uppercase tracking-[0.32em] text-[#F5A800]">
-                Qué hacemos
-              </span>
-              <span className="h-px w-10 bg-[#F5A800]" />
-            </div>
-            <h2 className="mt-5 font-display font-extrabold text-5xl md:text-6xl text-[#1A1A1A] tracking-tight">
-              Nuestros Servicios
-            </h2>
-            <p className="mt-5 max-w-2xl mx-auto text-[#7F7F7F] text-lg">
-              Soluciones especializadas en ingeniería Metalmecánica y construcción.
-            </p>
+        <div ref={headerRef} className="text-center mb-16">
+          <div className="inline-flex items-center gap-3">
+            <span className="h-px w-10 bg-[#F5A800]" />
+            <span className="text-xs font-semibold uppercase tracking-[0.32em] text-[#F5A800]">
+              Qué hacemos
+            </span>
+            <span className="h-px w-10 bg-[#F5A800]" />
           </div>
-        </Reveal>
+          <h2 className="mt-5 font-display font-extrabold text-5xl md:text-6xl text-[#1A1A1A] tracking-tight">
+            Nuestros Servicios
+          </h2>
+          <p className="mt-5 max-w-2xl mx-auto text-[#7F7F7F] text-lg">
+            Soluciones especializadas en ingeniería Metalmecánica y construcción.
+          </p>
+        </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {SERVICES.map((s, i) => {
             const I = s.Icon;
             return (
-              <Reveal key={s.id} delay={i * 80}>
-                <button
-                  type="button"
-                  onClick={() => onSelect(s.id)}
-                  className="group relative w-full h-full text-left bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_30px_50px_-25px_rgba(245,168,0,0.45)] border border-transparent hover:border-[#F5A800]/40"
-                >
-                  <div className="absolute top-0 right-0 w-0 h-0 border-t-[28px] border-t-[#F5A800] border-l-[28px] border-l-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="relative mb-6">
-                    <div className="h-16 w-16 rounded-full bg-[#F5A800] flex items-center justify-center shadow-[0_10px_25px_-10px_rgba(245,168,0,0.7)]">
-                      <I className="w-8 h-8 text-[#1A1A1A]" strokeWidth={2} />
-                    </div>
+              <button
+                key={s.id}
+                ref={(el) => {
+                  cardRefs.current[i] = el;
+                }}
+                type="button"
+                onClick={() => onSelect(s.id)}
+                className="group relative w-full h-full text-left bg-white p-7 transition-shadow duration-300 hover:shadow-[0_30px_50px_-25px_rgba(245,168,0,0.45)] border border-transparent hover:border-[#F5A800]/40 will-change-transform"
+              >
+                <div className="absolute top-0 right-0 w-0 h-0 border-t-[28px] border-t-[#F5A800] border-l-[28px] border-l-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative mb-6">
+                  <div className="h-16 w-16 rounded-full bg-[#F5A800] flex items-center justify-center shadow-[0_10px_25px_-10px_rgba(245,168,0,0.7)]">
+                    <I className="w-8 h-8 text-[#1A1A1A]" strokeWidth={2} />
                   </div>
-                  <div className="font-display font-extrabold text-[11px] tracking-[0.22em] text-[#F5A800] uppercase mb-2">
-                    {String(i + 1).padStart(2, "0")} · Servicio
-                  </div>
-                  <h3 className="font-display font-extrabold text-lg leading-snug text-[#1A1A1A] tracking-tight">
-                    {s.title}
-                  </h3>
-                  <p className="mt-3 text-sm text-[#2D2D2D]/80 leading-relaxed">
-                    {s.short}
-                  </p>
-                  <div className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[#1A1A1A] group-hover:text-[#F5A800] transition-colors">
-                    Ver detalle
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </div>
-                </button>
-              </Reveal>
+                </div>
+                <div className="font-display font-extrabold text-[11px] tracking-[0.22em] text-[#F5A800] uppercase mb-2">
+                  {String(i + 1).padStart(2, "0")} · Servicio
+                </div>
+                <h3 className="font-display font-extrabold text-lg leading-snug text-[#1A1A1A] tracking-tight">
+                  {s.title}
+                </h3>
+                <p className="mt-3 text-sm text-[#2D2D2D]/80 leading-relaxed">
+                  {s.short}
+                </p>
+                <div className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[#1A1A1A] group-hover:text-[#F5A800] transition-colors">
+                  Ver detalle
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </div>
+              </button>
             );
           })}
         </div>
 
-        <Reveal delay={150}>
-          <div className="mt-16 text-center">
-            <button
-              onClick={onOpenCatalog}
-              className="inline-flex items-center gap-3 bg-[#F5A800] px-8 py-4 font-bold text-[#1A1A1A] uppercase tracking-wider text-sm hover:bg-[#FFB81C] transition-colors"
-            >
-              Ver Catálogo Completo
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
-        </Reveal>
+        <div ref={ctaRef} className="mt-16 text-center">
+          <button
+            onClick={onOpenCatalog}
+            className="inline-flex items-center gap-3 bg-[#F5A800] px-8 py-4 font-bold text-[#1A1A1A] uppercase tracking-wider text-sm hover:bg-[#FFB81C] transition-colors"
+          >
+            Ver Catálogo Completo
+            <ArrowRight className="w-4 h-4" />
+          </button>
+        </div>
       </div>
     </section>
   );

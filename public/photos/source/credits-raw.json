@@ -1,0 +1,101 @@
+{
+  "hero-welding": {
+    "src": "assets/img/hero-welding.jpg",
+    "title": "techshop_members_welding_project",
+    "creator": "TechShop",
+    "creator_url": "https://www.flickr.com/photos/30268134@N06",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/30268134@N06/2832912619",
+    "source": "flickr"
+  },
+  "service-reservorios": {
+    "src": "assets/img/service-reservorios.jpg",
+    "title": "Industrial Tank",
+    "creator": "Matthew Henry",
+    "creator_url": "https://burst.shopify.com/@matthew_henry",
+    "license": "cc0",
+    "license_version": "1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "foreign_landing_url": "https://stocksnap.io/photo/industrial-tank-3FKG3DTBGH",
+    "source": "stocksnap"
+  },
+  "service-plataformas": {
+    "src": "assets/img/service-plataformas.jpg",
+    "title": "Samson or Goliath^ - geograph.org.uk - 1411750",
+    "creator": "Ross",
+    "creator_url": "https://www.geograph.org.uk/profile/12869",
+    "license": "by-sa",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "foreign_landing_url": "https://commons.wikimedia.org/w/index.php?curid=14159571",
+    "source": "wikimedia"
+  },
+  "service-mantenimiento": {
+    "src": "assets/img/service-mantenimiento.jpg",
+    "title": "USS HARRY S. TRUMAN (CVN 75)_140210-N-ZG705-022",
+    "creator": "U.S. Naval Forces Central Command/U.S. Fifth Fleet",
+    "creator_url": "https://www.flickr.com/photos/48776503@N05",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/48776503@N05/12451232783",
+    "source": "flickr"
+  },
+  "about-precision": {
+    "src": "assets/img/about-precision.jpg",
+    "title": "NJ - West Orange: Edison Labaratory Heavy Machine Shop",
+    "creator": "wallyg",
+    "creator_url": "https://www.flickr.com/photos/70323761@N00",
+    "license": "by-nc-nd",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by-nc-nd/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/70323761@N00/53146499053",
+    "source": "flickr"
+  },
+  "about-blueprint": {
+    "src": "assets/img/about-blueprint.jpg",
+    "title": "Civil engineering: viaducts Austria. Lithograph",
+    "creator": "Unknown",
+    "creator_url": null,
+    "license": "cc0",
+    "license_version": "1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "foreign_landing_url": "https://www.rawpixel.com/image/14000630/image-paper-pattern-public-domain",
+    "source": "rawpixel"
+  },
+  "team-workers": {
+    "src": "assets/img/team-workers.jpg",
+    "title": "School renovation, Dikhil, Djibouti, April 2011",
+    "creator": "US Army Africa",
+    "creator_url": "https://www.flickr.com/photos/36281822@N08",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/36281822@N08/5663254577",
+    "source": "flickr"
+  },
+  "process-factory": {
+    "src": "assets/img/process-factory.jpg",
+    "title": "Kwiki Economy Set",
+    "creator": "Hardcast65",
+    "creator_url": "https://www.flickr.com/photos/66958833@N05",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/66958833@N05/6171910995",
+    "source": "flickr"
+  },
+  "process-steel": {
+    "src": "assets/img/process-steel.jpg",
+    "title": "Untitled",
+    "creator": "Unknown",
+    "creator_url": null,
+    "license": "cc0",
+    "license_version": "1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "foreign_landing_url": "https://www.rawpixel.com/image/6046784/free-public-domain-cc0-photo",
+    "source": "rawpixel"
+  }
+}

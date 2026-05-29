@@ -1,0 +1,5 @@
+[
+  { "id": "hero-workshop",        "query": "industrial workshop interior",         "aspect": "wide",  "size": "large" },
+  { "id": "service-cosechadoras", "query": "fishing boat harvest aquaculture",     "aspect": null,    "size": "large" },
+  { "id": "service-carretones",   "query": "industrial trailer heavy cargo",       "aspect": null,    "size": "large" }
+]

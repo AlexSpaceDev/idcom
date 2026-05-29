@@ -8,7 +8,9 @@ import CatalogModal from "./CatalogModal";
 import Contacto from "./Contacto";
 import Footer from "./Footer";
 import WhatsappFab from "./WhatsappFab";
+import WorkWithUsFab from "./WorkWithUsFab";
 import Toast from "./Toast";
+import CustomCursor from "./CustomCursor";
 
 export default function Landing() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -61,7 +63,9 @@ export default function Landing() {
         onRequestService={requestServiceFromCatalog}
       />
       <WhatsappFab />
+      <WorkWithUsFab onNavigate={navigate} />
       <Toast message={toast} onClose={() => setToast("")} />
+      <CustomCursor />
     </div>
   );
 }
