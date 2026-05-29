@@ -3,16 +3,22 @@ import Reveal from "./Reveal";
 const CARDS = [
   {
     title: "¿Quiénes Somos?",
-    body: "IDCOM es una empresa especializada en ingeniería mecánica, diseño y construcciones industriales. Con años de experiencia en el sector, ofrecemos soluciones integrales para la industria.",
+    body: "Empresa especializada en ingeniería mecánica, diseño y construcciones industriales. Soluciones integrales para la industria.",
   },
   {
     title: "Misión",
-    body: "Dar al cliente los mejores servicios, calidad, variedad, con productos innovadores. Brindarles soluciones que optimicen procesos de manera ágil y oportuna.",
+    body: "Servicios de calidad con productos innovadores que optimizan procesos de forma ágil.",
   },
   {
     title: "Visión",
-    body: "Ser líderes en innovación y diseño para lograr los mejores resultados. Implementar soluciones que impulsen el éxito de las empresas.",
+    body: "Liderar con innovación y diseño para impulsar el éxito de cada proyecto industrial.",
   },
+];
+
+const STRIP = [
+  { src: "/photos/about-precision.webp", label: "Precisión", caption: "Maquinaria pesada y trabajo de torno" },
+  { src: "/photos/team-workers.webp",    label: "Operación", caption: "Equipo técnico en planta industrial" },
+  { src: "/photos/process-steel.webp",   label: "Capacidad", caption: "Soldadura estructural especializada" },
 ];
 
 export default function Nosotros() {
@@ -37,6 +43,31 @@ export default function Nosotros() {
             </p>
           </div>
         </Reveal>
+        <div className="grid sm:grid-cols-3 gap-3 sm:gap-4 mb-16 lg:mb-20">
+          {STRIP.map((p, i) => (
+            <Reveal key={p.label} delay={i * 80}>
+              <figure className="group relative aspect-[4/3] overflow-hidden bg-[#1A1A1A]">
+                <img
+                  src={p.src}
+                  alt={p.caption}
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/85 via-[#1A1A1A]/30 to-transparent pointer-events-none" />
+                <figcaption className="absolute inset-x-0 bottom-0 p-4">
+                  <div className="text-[10px] uppercase tracking-[0.28em] text-[#F5A800] font-semibold mb-1">
+                    {p.label}
+                  </div>
+                  <div className="text-sm text-white font-medium leading-snug">
+                    {p.caption}
+                  </div>
+                </figcaption>
+              </figure>
+            </Reveal>
+          ))}
+        </div>
+
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {CARDS.map((c, i) => (
             <Reveal key={c.title} delay={i * 100}>

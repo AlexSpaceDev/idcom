@@ -1,0 +1,6 @@
+[
+  { "id": "service-cosechadoras", "query": "shrimp farm pond aquaculture industrial",  "aspect": null,    "size": "large" },
+  { "id": "service-carretones",   "query": "industrial flatbed trailer steel chassis", "aspect": null,    "size": "large" },
+  { "id": "service-plataformas",  "query": "industrial steel grating platform metal",  "aspect": null,    "size": "large" },
+  { "id": "team-workers",         "query": "metalworking factory workers safety",      "aspect": "tall",  "size": "large" }
+]

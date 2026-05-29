@@ -1,0 +1,123 @@
+{
+  "about-blueprint": {
+    "src": "/photos/about-blueprint.webp",
+    "title": "Civil engineering: viaducts Austria. Lithograph",
+    "creator": "Unknown",
+    "creator_url": null,
+    "license": "cc0",
+    "license_version": "1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "foreign_landing_url": "https://www.rawpixel.com/image/14000630/image-paper-pattern-public-domain",
+    "source": "rawpixel"
+  },
+  "about-precision": {
+    "src": "/photos/about-precision.webp",
+    "title": "Mechanische Werkstatt",
+    "creator": "Auto & Traktor Museum",
+    "creator_url": "https://commons.wikimedia.org/w/index.php?title=User:SilviaGeorgi&action=edit&redlink=1",
+    "license": "by-sa",
+    "license_version": "4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "foreign_landing_url": "https://commons.wikimedia.org/w/index.php?curid=79138356",
+    "source": "wikimedia"
+  },
+  "ambient-crane": {
+    "src": "/photos/ambient-crane.webp",
+    "title": "Samson or Goliath^ - geograph.org.uk - 1411750",
+    "creator": "Ross",
+    "creator_url": "https://www.geograph.org.uk/profile/12869",
+    "license": "by-sa",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "foreign_landing_url": "https://commons.wikimedia.org/w/index.php?curid=14159571",
+    "source": "wikimedia"
+  },
+  "hero-welding": {
+    "src": "/photos/hero-welding.webp",
+    "title": "techshop_members_welding_project",
+    "creator": "TechShop",
+    "creator_url": "https://www.flickr.com/photos/30268134@N06",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/30268134@N06/2832912619",
+    "source": "flickr"
+  },
+  "process-steel": {
+    "src": "/photos/process-steel.webp",
+    "title": "Untitled",
+    "creator": "Unknown",
+    "creator_url": null,
+    "license": "cc0",
+    "license_version": "1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "foreign_landing_url": "https://www.rawpixel.com/image/6046784/free-public-domain-cc0-photo",
+    "source": "rawpixel"
+  },
+  "service-carretones": {
+    "src": "/photos/service-carretones.webp",
+    "title": "MSC Vigo IMO 9480227 01",
+    "creator": "Piergiuliano Chesi",
+    "creator_url": null,
+    "license": "by",
+    "license_version": "3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "foreign_landing_url": "https://commons.wikimedia.org/w/index.php?curid=27248283",
+    "source": "wikimedia"
+  },
+  "service-cosechadoras": {
+    "src": "/photos/service-cosechadoras.webp",
+    "title": "Shrimp ponds",
+    "creator": "eutrophication&hypoxia",
+    "creator_url": "https://www.flickr.com/photos/48722974@N07",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/48722974@N07/4478993626",
+    "source": "flickr"
+  },
+  "service-mantenimiento": {
+    "src": "/photos/service-mantenimiento.webp",
+    "title": "USS HARRY S. TRUMAN (CVN 75)_140210-N-ZG705-022",
+    "creator": "U.S. Naval Forces Central Command/U.S. Fifth Fleet",
+    "creator_url": "https://www.flickr.com/photos/48776503@N05",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/48776503@N05/12451232783",
+    "source": "flickr"
+  },
+  "service-plataformas": {
+    "src": "/photos/service-plataformas.webp",
+    "title": "Walk the Plank",
+    "creator": "Steve Snodgrass",
+    "creator_url": "https://www.flickr.com/photos/10710442@N08",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/10710442@N08/4923278674",
+    "source": "flickr"
+  },
+  "service-reservorios": {
+    "src": "/photos/service-reservorios.webp",
+    "title": "Industrial Tank",
+    "creator": "Matthew Henry",
+    "creator_url": "https://burst.shopify.com/@matthew_henry",
+    "license": "cc0",
+    "license_version": "1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "foreign_landing_url": "https://stocksnap.io/photo/industrial-tank-3FKG3DTBGH",
+    "source": "stocksnap"
+  },
+  "team-workers": {
+    "src": "/photos/team-workers.webp",
+    "title": "Work Manufactures Edited 2020",
+    "creator": "chimpwithcan",
+    "creator_url": "https://www.flickr.com/photos/188454520@N02",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/188454520@N02/49917002413",
+    "source": "flickr"
+  }
+}

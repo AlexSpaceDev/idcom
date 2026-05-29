@@ -86,10 +86,19 @@ export default function Footer({ onOpenCatalog, onNavigate }: FooterProps) {
             </ul>
           </div>
         </div>
-        <div className="mt-14 pt-6 border-t border-[#F5A800]/40">
-          <p className="text-center text-xs text-white/40">
+        <div className="mt-14 pt-6 border-t border-[#F5A800]/40 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40 text-center sm:text-left">
+          <p>
             © 2026 IDCOM — Ingeniería en Diseño y Construcciones Metalmecánicas.
             Todos los derechos reservados.
+          </p>
+          <p>
+            Imágenes bajo Creative Commons ·{" "}
+            <a
+              href="/creditos"
+              className="text-white/60 hover:text-[#F5A800] transition-colors"
+            >
+              Créditos →
+            </a>
           </p>
         </div>
       </div>

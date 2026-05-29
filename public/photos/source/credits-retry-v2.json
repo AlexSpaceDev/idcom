@@ -1,0 +1,35 @@
+{
+  "service-cosechadoras": {
+    "src": "assets/img/service-cosechadoras.jpg",
+    "title": "Shrimp ponds",
+    "creator": "eutrophication&hypoxia",
+    "creator_url": "https://www.flickr.com/photos/48722974@N07",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/48722974@N07/4478993626",
+    "source": "flickr"
+  },
+  "service-plataformas": {
+    "src": "assets/img/service-plataformas.jpg",
+    "title": "Walk the Plank",
+    "creator": "Steve Snodgrass",
+    "creator_url": "https://www.flickr.com/photos/10710442@N08",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/10710442@N08/4923278674",
+    "source": "flickr"
+  },
+  "team-workers": {
+    "src": "assets/img/team-workers.jpg",
+    "title": "Work Manufactures Edited 2020",
+    "creator": "chimpwithcan",
+    "creator_url": "https://www.flickr.com/photos/188454520@N02",
+    "license": "by",
+    "license_version": "2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/",
+    "foreign_landing_url": "https://www.flickr.com/photos/188454520@N02/49917002413",
+    "source": "flickr"
+  }
+}

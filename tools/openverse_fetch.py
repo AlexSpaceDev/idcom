@@ -68,11 +68,13 @@ def http_get(url, accept="application/json"):
 def search_one(query, aspect=None, size=None):
     """Search Openverse, progressively relaxing filters until we find something."""
     page_size = 6
+    # COMPLIANCE: license filter is ALWAYS kept. Original script dropped it on
+    # 4th try which let non-commercial licenses through (idcom is commercial).
     tries = [
         {"q": query, "license": SAFE_LICENSES, "aspect_ratio": aspect, "size": size, "mature": "false", "page_size": page_size},
         {"q": query, "license": SAFE_LICENSES, "aspect_ratio": aspect, "mature": "false", "page_size": page_size},
         {"q": query, "license": SAFE_LICENSES, "mature": "false", "page_size": page_size},
-        {"q": query, "mature": "false", "page_size": page_size},
+        {"q": query, "license": SAFE_LICENSES, "page_size": page_size},
     ]
     for params in tries:
         clean = {k: v for k, v in params.items() if v not in (None, "")}

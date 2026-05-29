@@ -17,6 +17,7 @@ export type Service = {
   id: string;
   title: string;
   short: string;
+  image: string;
   Icon: LucideIcon;
 };
 
@@ -36,36 +37,36 @@ export const SERVICES: Service[] = [
   {
     id: "cosechadoras",
     title: "Cosechadoras de Camarón",
-    short:
-      "Producimos y vendemos cosechadoras de alta eficiencia. Fabricación y reparaciones especializadas.",
+    short: "Cosechadoras de alta eficiencia, fabricación y reparaciones.",
+    image: "/photos/service-cosechadoras.webp",
     Icon: Fish,
   },
   {
     id: "reservorios",
     title: "Reservorios de Combustible",
-    short:
-      "Suministramos tanques de combustible diseñados para aplicaciones industriales y automotrices.",
+    short: "Tanques de combustible para uso industrial y automotriz.",
+    image: "/photos/service-reservorios.webp",
     Icon: Fuel,
   },
   {
     id: "plataformas",
     title: "Plataformas para Bines",
-    short:
-      "Fabricamos plataformas de acero estructural para carga y trabajo industrial.",
+    short: "Acero estructural para carga y trabajo industrial.",
+    image: "/photos/service-plataformas.webp",
     Icon: PackageOpen,
   },
   {
     id: "carretones",
     title: "Carretones de Carga Pesada",
-    short:
-      "Carretones robustos con chasis reforzado y especificaciones técnicas de alto rendimiento.",
+    short: "Chasis reforzado, especificación técnica de alto rendimiento.",
+    image: "/photos/service-carretones.webp",
     Icon: Truck,
   },
   {
     id: "mantenimiento",
     title: "Mantenimiento General Industrial",
-    short:
-      "Soluciones de mantenimiento integral (preventivo, correctivo, predictivo) para equipos y sistemas industriales.",
+    short: "Mantenimiento preventivo, correctivo y predictivo industrial.",
+    image: "/photos/service-mantenimiento.webp",
     Icon: Wrench,
   },
 ];

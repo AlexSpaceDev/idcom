@@ -138,26 +138,36 @@ export default function Servicios({ onSelect, onOpenCatalog }: ServiciosProps) {
                 }}
                 type="button"
                 onClick={() => onSelect(s.id)}
-                className="group relative w-full h-full text-left bg-white p-7 transition-shadow duration-300 hover:shadow-[0_30px_50px_-25px_rgba(245,168,0,0.45)] border border-transparent hover:border-[#F5A800]/40 will-change-transform"
+                className="group relative w-full h-full text-left bg-white overflow-hidden transition-shadow duration-300 hover:shadow-[0_30px_50px_-25px_rgba(245,168,0,0.45)] border border-transparent hover:border-[#F5A800]/40 will-change-transform"
               >
-                <div className="absolute top-0 right-0 w-0 h-0 border-t-[28px] border-t-[#F5A800] border-l-[28px] border-l-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="relative mb-6">
-                  <div className="h-16 w-16 rounded-full bg-[#F5A800] flex items-center justify-center shadow-[0_10px_25px_-10px_rgba(245,168,0,0.7)]">
-                    <I className="w-8 h-8 text-[#1A1A1A]" strokeWidth={2} />
+                <div className="relative aspect-[4/3] overflow-hidden bg-[#1A1A1A]">
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    loading={i < 3 ? "eager" : "lazy"}
+                    decoding="async"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1A]/60 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute top-3 left-3 font-display font-extrabold text-[11px] tracking-[0.22em] text-white uppercase bg-[#1A1A1A]/70 backdrop-blur-sm px-2.5 py-1">
+                    {String(i + 1).padStart(2, "0")} · Servicio
                   </div>
+                  <div className="absolute -bottom-5 left-5 h-12 w-12 rounded-full bg-[#F5A800] flex items-center justify-center shadow-[0_10px_25px_-10px_rgba(245,168,0,0.9)] ring-4 ring-white">
+                    <I className="w-5 h-5 text-[#1A1A1A]" strokeWidth={2.4} />
+                  </div>
+                  <div className="absolute top-0 right-0 w-0 h-0 border-t-[28px] border-t-[#F5A800] border-l-[28px] border-l-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <div className="font-display font-extrabold text-[11px] tracking-[0.22em] text-[#F5A800] uppercase mb-2">
-                  {String(i + 1).padStart(2, "0")} · Servicio
-                </div>
-                <h3 className="font-display font-extrabold text-lg leading-snug text-[#1A1A1A] tracking-tight">
-                  {s.title}
-                </h3>
-                <p className="mt-3 text-sm text-[#2D2D2D]/80 leading-relaxed">
-                  {s.short}
-                </p>
-                <div className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[#1A1A1A] group-hover:text-[#F5A800] transition-colors">
-                  Ver detalle
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                <div className="px-5 pt-9 pb-6">
+                  <h3 className="font-display font-extrabold text-lg leading-snug text-[#1A1A1A] tracking-tight">
+                    {s.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-[#2D2D2D]/80 leading-relaxed">
+                    {s.short}
+                  </p>
+                  <div className="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[#1A1A1A] group-hover:text-[#F5A800] transition-colors">
+                    Ver detalle
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </div>
                 </div>
               </button>
             );
